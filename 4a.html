@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Event Listeners Example</title>
+
+<style>
+#myImage{
+  width:200px;
+  border:3px solid transparent;
+}
+</style>
+
+</head>
+
+<body>
+
+<button id="myButton">Click Me</button>
+
+<img id="myImage"
+src="https://thumbs.dreamstime.com/b/young-conceptual-image-large-stone-shape-human-brain-conceptual-image-large-stone-shape-110748113.jpg">
+
+<script>
+
+document.getElementById("myButton").addEventListener("click", function(){
+  console.log("Button clicked!");
+});
+
+document.getElementById("myImage").addEventListener("mouseover", function(){
+  this.style.border="3px solid red";
+});
+
+document.getElementById("myImage").addEventListener("mouseout", function(){
+  this.style.border="3px solid transparent";
+});
+
+document.addEventListener("keydown", function(e){
+  console.log("Key Pressed:", e.key);
+});
+
+</script>
+
+</body>
+</html>
